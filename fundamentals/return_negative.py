@@ -18,4 +18,8 @@ print(make_negative(1), -1)
 print(make_negative(-5), -5)
 print(make_negative(0),0)
 
-    
+
+# more succint solution
+# using the built-in function abs() which returns the absolute value of the argument(value of argument without a sign), then we negate the answer.
+def make_negative(num):
+    return -abs(num)
