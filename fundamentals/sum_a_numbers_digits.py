@@ -18,3 +18,13 @@ def sum_digits(number):
 print(sum_digits(10))
 print(sum_digits(99))
 print(sum_digits(-32))
+
+
+# more succint solutiom
+
+def sum_digits(number):
+    return sum(int(i) for i in str(abs(number)))
+
+print(sum_digits(102123))
+print(sum_digits(99456))
+print(sum_digits(-35672))
