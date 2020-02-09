@@ -17,3 +17,11 @@ print(get_count('fork this template for the 100 days journal - to keep yourself 
 print(get_count('solutions from my python3 code practice challenges from hackerrank'))
 print(get_count('code practice from my freecodecamp study'))
 
+# more succint solution
+
+def vowels_count(s):
+    return sum(i in 'aeiou' for i in s)
+
+print(vowels_count('Seeing something unexpected? Take a look at the GitHub profile guide.'))
+
+
