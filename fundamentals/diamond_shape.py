@@ -22,7 +22,16 @@
 #   *
 # ...that is: " *\n ***\n*****\n ***\n *\n"
 
-def diamond(n):
-    if n % 2 == 1 and n>0:
-        diamond = '*' + 
-    return "*"
+def diamond(num):
+    diamond_str = ''
+    if num % 2 == 0 or num<0:
+        return None
+    else:
+        for i in range(0,num):
+            if i == 0 or i == num:
+                diamond_str += ' *\n'
+            else:
+                diamond_str += '*' * (i+2) + '\n'
+        return diamond_str
+
+print(diamond(5))
