@@ -19,3 +19,13 @@ def two_sum(numbers, target):
 print(two_sum([1,2,3],4))
 print(two_sum([1234,5678,9012], 14690))
 print((two_sum([2,2,3], 4)))
+
+def two_sum(numbers,target):
+    for index1, number1 in enumerate(numbers):
+        for index2, number2 in enumerate(numbers):
+            if index1 != index2 and number1 + number2 == target:
+                return((index1, index2))
+
+print(two_sum([1,2,3],4))
+print(two_sum([1234,5678,9012], 14690))
+print((two_sum([2,2,3], 4)))
