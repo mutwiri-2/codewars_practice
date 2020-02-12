@@ -11,3 +11,12 @@ def solution(string, ending):
 print(solution('abcde', 'cde'))
 print(solution('abcde', 'abc'))
 print(solution('abcde', ''))
+
+# another solution
+
+def solution(string, ending):
+    return string.endswith(ending)
+
+print(solution('abcde', 'cde'))
+print(solution('abcde', 'abc'))
+print(solution('abcde', ''))
