@@ -17,5 +17,8 @@ def gimme(input_array):
         if num != max(input_array) and num != min(input_array):
             return index
 
+def gimme(input_array):
+    return input_array.index(sorted(input_array)[1])
+
 print(gimme([2, 3, 1]))
 print(gimme([5, 10, 14]))
