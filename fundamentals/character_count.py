@@ -6,7 +6,7 @@
 
 def count(string):
     result = {}
-    for char in list(string):
+    for char in string:
         result[char] = result.get(char,0) + 1
     return result
 
