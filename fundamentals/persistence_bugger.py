@@ -22,7 +22,7 @@ def persistence(n):
         times += 1
     return times
 
-# print(persistence(4))
+print(persistence(4))
 print(persistence(39))
-# print(persistence(999))
-# print(persistence(3456))
+print(persistence(999))
+print(persistence(3456))
