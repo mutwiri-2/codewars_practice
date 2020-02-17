@@ -10,12 +10,23 @@
 # Invalid smiley faces:
 # ;( :> :} :]
 
+# Example cases:
+
+# countSmileys([':)', ';(', ';}', ':-D']);       // should return 2;
+# countSmileys([';D', ':-(', ':-)', ';~)']);     // should return 3;
+# countSmileys([';]', ':[', ';*', ':$', ';-D']); // should return 1;
+
+# Note: In case of an empty array return 0. You will not be tested with invalid input (input will always be an array). Order of the face (eyes, nose, mouth) elements will always be the same
+
 def count_smileys(arr):
     count = 0
     for element in arr:
-        if element[0] in ':;' and element[-1] in ')D':
-            if element[1:-1] == [] or '-~' in element[1:-1]:
-                count+=1
+        length = len(element)
+        if length <=3:
+            if length == 2 and (element[0] in ':;' and element[-1] in ')D'):
+                count += 1
+            elif length == 3 and (element[0] in ':;' and element[-1] in ')D' and element[1:-1] in '-~'):
+                count += 1
     return count
 
 
