@@ -29,7 +29,13 @@ def count_smileys(arr):
                 count += 1
     return count
 
-
+def count_smileys(arr):
+    count = 0
+    smileys = [":)", ";)", ":~)", ";~)", ":-)", ";-)", ":D", ";D", ":~D", ";~D", ":-D", ";-D"]
+    for i in arr:
+      if i in smileys:
+        count += 1
+    return count
 
 print(count_smileys([]))
 print(count_smileys([':D',':~)',';~D',':)']))
