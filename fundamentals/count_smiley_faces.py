@@ -53,3 +53,7 @@ print(count_smileys([]))
 print(count_smileys([':D',':~)',';~D',':)']))
 print(count_smileys([':)',':(',':D',':O',':;']))
 print(count_smileys([';]', ':[', ';*', ':$', ';-D']))
+# best solution
+from re import findall
+def count_smileys(arr):
+    return len(list(findall(r"[:;][-~]?[)D]", " ".join(arr))))
