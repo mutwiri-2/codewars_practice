@@ -9,13 +9,13 @@
 
 
 def sort_array(source_array):
-    for num1, index1 in enumerate(source_array):
+    for index1, num1 in enumerate(source_array):
         if num1 % 2 == 1:
-            for num2, index2 in enumerate(source_array):
-                if num2 < num1:
-                    source_array[index1] = min(num1, num2)
-        else:
-            continue
+            for index2, num2 in enumerate(source_array):
+                if num2 % 2 == 1 and num2 != num1:
+                    if num2 < num1:
+                        source_array[index1] = num2
+                        source_array[index2] = num1
         return source_array
 
 print(sort_array([5, 3, 2, 8, 1, 4]))
