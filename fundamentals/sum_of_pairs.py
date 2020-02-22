@@ -30,7 +30,7 @@ def sum_pairs(ints, s):
     answer = None
     for idx1, num1 in enumerate(ints):
         for idx2, num2 in enumerate(ints):
-            if num1 + num2 == s:
+            if num1 + num2 == s and idx1 != idx2:
                 list_answer.append([idx1, idx2])
     return list_answer 
                 
