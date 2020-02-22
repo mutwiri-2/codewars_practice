@@ -27,12 +27,17 @@
 
 def sum_pairs(ints, s):
     list_answer = []
-    answer = None
+    # answer = None
     for idx1, num1 in enumerate(ints):
         for idx2, num2 in enumerate(ints):
             if num1 + num2 == s and idx1 != idx2:
-                list_answer.append([idx1, idx2])
-    return list_answer 
+                list_answer.append([num1, num2])
+    # return list_answer 
+    if len(list_answer) >= 1:
+        answer = sorted(list_answer)
+        return answer[0]
+    else:
+        return None
                 
 
 
