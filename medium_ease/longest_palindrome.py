@@ -13,13 +13,19 @@
 # "" -> 0
 
 def longest_palindrome (s):
-    list = []
-    for char in s:
+    palindrome_list = []
+    for i in range(len(s)):
+        for j in range(i+1,len(s)):
+            chunk = s[i:j]
+            if chunk == chunk[::-1]:
+                palindrome_list.append(chunk)
+    return palindrome_list
+    # return max(palindrome_list)
         
 
-print(longest_palindrome("a") #1
-print(longest_palindrome("aa") #2
-print(longest_palindrome("baa") #2
-print(longest_palindrome("aab") #2
-print(longest_palindrome("abcdefghba") #1
-print(longest_palindrome("baablkj12345432133d") #9
+print(longest_palindrome("a")) #1
+print(longest_palindrome("aa")) #2
+print(longest_palindrome("baa")) #2
+print(longest_palindrome("aab")) #2
+print(longest_palindrome("abcdefghba")) #1
+print(longest_palindrome("baablkj12345432133d")) #9
