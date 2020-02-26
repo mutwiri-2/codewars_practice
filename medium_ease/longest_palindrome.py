@@ -14,13 +14,18 @@
 
 def longest_palindrome (s):
     palindrome_list = []
-    for i in range(len(s)):
-        for j in range(i+1,len(s)):
-            chunk = s[i:j]
-            if chunk == chunk[::-1]:
-                palindrome_list.append(chunk)
-    return palindrome_list
-    # return max(palindrome_list)
+    length = 0
+    if len(s) == 1:
+        length = 1
+    else:
+        for i in range(len(s)):
+            for j in range(i+1,len(s)):
+                chunk = s[i:j]
+                if chunk == chunk[::-1]:
+                    palindrome_list.append(chunk)
+        print(palindrome_list)
+        length = len(sorted(palindrome_list)[-1])
+    return length
         
 
 print(longest_palindrome("a")) #1
