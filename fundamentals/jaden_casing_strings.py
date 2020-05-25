@@ -6,6 +6,7 @@
 # Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
 
 # my solution
+print("Solution by capitalizing each word's first letter using upper() method")
 def to_jaden_case(string):
     return ' '.join([word[0].upper() + word[1:] for word in string.split()])
     
@@ -20,14 +21,25 @@ print('#' * 99)
 def to_jaden_case(string):
     return string.title()
 
-print("Solution using title() method")
+print("Solution using title() method which has a bug")
 print(to_jaden_case("How can mirrors be real if our eyes aren't real"))
 
 print('#' * 99)
 # I then had to use list comprehensions to solve it. First get a list of the words in the string using split() then loop over every word in the list capitalize the first letter and append the rest of the letters. Then call the join string method using space as the delimiter to create a string from the words which you return as the output
 # The expression [word[0].upper() + word[1:] in the list comprehension can be replaced by the capitalize string method which returns a capitalized version of a word, i.e. make the first character have upper case and the rest lower case like so
+print("solution by using capitalize() string method to make the first letter of each word uppercase")
 
 def to_jaden_case(string):
-    return ' '.join([word.capitalize() for word in string.split()])
+    return ' '.join([word.capitalize() for word in string.split()]) # In Python, the capitalize() method converts the first character of a string to capital (uppercase) letter. If the string has its first character as capital, then it returns the original string.
 
+print(to_jaden_case("How can mirrors be real if our eyes aren't real"))
+
+print('#' * 99)
+
+# another solution
+print("Solution using string modules capwords() method")
+import string
+
+def to_jaden_case(non_jaden_strings):
+    return string.capwords(non_jaden_strings)
 print(to_jaden_case("How can mirrors be real if our eyes aren't real"))
