@@ -4,9 +4,10 @@
 
 # [10, 343445353, 3453445, 3453545353453] should return 3453455.
 
-numbers = [10, 343445353, 3453445, 3453545353453]
-numbers = [19, 5, 42, 2, 77]
+
 def sum_of_two_smallest(numbers):
     return sum(sorted(numbers)[:2])
-
+numbers = [19, 5, 42, 2, 77]
+print(sum_of_two_smallest(numbers))
+numbers = [10, 343445353, 3453445, 3453545353453]
 print(sum_of_two_smallest(numbers))
