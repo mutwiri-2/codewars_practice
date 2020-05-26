@@ -17,7 +17,7 @@ print(positive_sum([]))
 
 print('#' * 99)
 
-# using a generator expression
+# use a generator expression to create an iterator of positive numbers then pass it to the sum built-in function
 def positive_sum(arr):
     return sum(x for x in arr if x>0)  
 
