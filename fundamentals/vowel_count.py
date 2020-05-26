@@ -23,24 +23,18 @@ print('#' * 99)
 def vowels_count(s):
     return sum(i in 'aeiou' for i in s)
 
-print(get_count('learn by practice the github pull request workflow'))
-print(get_count('fork this template for the 100 days journal - to keep yourself accountable (multiple languages available)'))
-print(get_count('solutions from my python3 code practice challenges from hackerrank'))
-print(get_count('code practice from my freecodecamp study'))
+print(vowels_count('learn by practice the github pull request workflow'))
+print(vowels_count('fork this template for the 100 days journal - to keep yourself accountable (multiple languages available)'))
+print(vowels_count('solutions from my python3 code practice challenges from hackerrank'))
+print(vowels_count('code practice from my freecodecamp study'))
 
 
 print('#' * 99)
 
-# more succint solution - use a generator expression to generate an iterator of Boolean values for how many times a vowel occurs in the string then pass that generator object to len built-in function to get the n.o of occurences
-def vowels_count(s):
-    return len(i in 'aeiou' for i in s)
-
-print(get_count('learn by practice the github pull request workflow'))
-print(get_count('fork this template for the 100 days journal - to keep yourself accountable (multiple languages available)'))
-print(get_count('solutions from my python3 code practice challenges from hackerrank'))
-print(get_count('code practice from my freecodecamp study'))
-
-
+import string
+letters = string.ascii_letters
+print(letters)
+print(sum(c in 'aeiou' for c in letters))
 
 
 
