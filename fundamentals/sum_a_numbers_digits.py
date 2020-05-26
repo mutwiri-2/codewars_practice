@@ -27,3 +27,13 @@ def sum_digits(number):
 print(sum_digits(102123))
 print(sum_digits(99456))
 print(sum_digits(-35672))
+
+
+print('#' * 99)
+# another solution - using lambda function and the map() higher order function return an iterator that applies the anonymous function (which just converts it's argument to an int) to every element in the iterable then pass this to the sum function
+def sum_digits(number):
+    return sum(map(lambda x: int(x), str(abs(number))))
+
+print(sum_digits(102123))
+print(sum_digits(99456))
+print(sum_digits(-35672))
