@@ -44,3 +44,16 @@ print(minimum([42, 54, 65, 87, 0])) #returns 0
 
 print('#' * 99)
 
+def minimum(arr):
+    return sorted(arr)[0]
+
+def maximum(arr):
+    return sorted(arr)[-1]
+
+print(maximum([4,6,2,1,9,63,-134,566])) # returns 566
+print(minimum([-52, 56, 30, 29, -54, 0, -110])) #returns -110
+print(maximum([5])) #returns 5
+print(minimum([42, 54, 65, 87, 0])) #returns 0
+
+print('#' * 99)
+
