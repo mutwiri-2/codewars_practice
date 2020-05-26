@@ -19,9 +19,8 @@ print(sum_digits(10))
 print(sum_digits(99))
 print(sum_digits(-32))
 
-
-# more succint solutiom
-
+print('#' * 99)
+# more succint solution - using a generator expression return an iterator of characters in the string version of the number converted to its absolute value - then pass each to the integer function to convert it to a number then to the sum function to get the sum of all the objects in the iterator
 def sum_digits(number):
     return sum(int(i) for i in str(abs(number)))
 
