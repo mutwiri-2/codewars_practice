@@ -26,3 +26,14 @@ print(positive_sum([-2,-4,-8,-12]))
 print(positive_sum([]))
 
 print('#' * 99)
+
+# use lambda expression with filter higher order function to return an iterator with positive numbers only then pass them to sum built-in function
+# ilter is a higher order built-in function that takes in a function and an iterable as arguments and returns an iterator with the elements from the iterable for which the function returns True
+def positive_sum(arr):
+    return sum(filter(lambda x: x>0 ,arr))  
+
+print(positive_sum([1,-4,7,12]))
+print(positive_sum([-2,-4,-8,-12]))
+print(positive_sum([]))
+
+print('#' * 99)
