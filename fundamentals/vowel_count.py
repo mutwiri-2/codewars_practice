@@ -44,10 +44,19 @@ print(vowels_count('code practice from my freecodecamp study'))
 
 print('#' * 99)
 
-import string
-letters = string.ascii_letters
-print(letters)
-print(sum(c in 'aeiou' for c in letters))
+# solution using regex
+
+import re
+def vowels_count(str):
+    return len(re.findall('[aeiou]', str, re.IGNORECASE))
+
+print(vowels_count('learn by practice the github pull request workflow'))
+print(vowels_count('fork this template for the 100 days journal - to keep yourself accountable (multiple languages available)'))
+print(vowels_count('solutions from my python3 code practice challenges from hackerrank'))
+print(vowels_count('code practice from my freecodecamp study'))
+
+
+print('#' * 99)
 
 
 
