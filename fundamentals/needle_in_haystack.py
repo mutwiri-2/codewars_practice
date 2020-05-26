@@ -16,7 +16,19 @@ def find_needle(haystack):
 
 print(find_needle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk']))
 
+print('#' * 99)
 # more succint solution
 # The index() method searches an element in the list and returns its index. In simple terms, the index() method finds the given element in a list and returns its position. If the same element is present more than once, the method returns the index of the first occurrence of the element
 def find_needle(haystack):
   return 'found the needle at position {}'.format(haystack.index('needle'))
+
+print(find_needle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk']))
+
+
+print('#' * 99)
+
+# using f strings
+def find_needle(haystack):
+  return f'found the needle at position {haystack.index("needle")}'
+
+print(find_needle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk']))
