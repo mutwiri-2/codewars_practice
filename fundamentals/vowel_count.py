@@ -21,7 +21,20 @@ print('#' * 99)
 
 # more succint solution - use a generator expression to generate an iterator of Boolean values for how many times a vowel occurs in the string then pass that generator object to sum built-in function
 def vowels_count(s):
+    # print(list(i in 'aeiou' for i in s))
     return sum(i in 'aeiou' for i in s)
+
+print(vowels_count('learn by practice the github pull request workflow'))
+print(vowels_count('fork this template for the 100 days journal - to keep yourself accountable (multiple languages available)'))
+print(vowels_count('solutions from my python3 code practice challenges from hackerrank'))
+print(vowels_count('code practice from my freecodecamp study'))
+
+print('#' * 99)
+
+# more succint solution - use a generator expression to generate an iterator of Boolean values for how many times a vowel occurs in the string then pass that generator object to sum built-in function
+def vowels_count(s):
+    # print([i for i in s if i in 'aeiou'])
+    return len([i for i in s if i in 'aeiou'])
 
 print(vowels_count('learn by practice the github pull request workflow'))
 print(vowels_count('fork this template for the 100 days journal - to keep yourself accountable (multiple languages available)'))
