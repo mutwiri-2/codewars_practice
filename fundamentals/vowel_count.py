@@ -70,4 +70,15 @@ print(vowels_count('code practice from my freecodecamp study'))
 
 print('#' * 99)
 
+print('#' * 99)
+
+# more succint solution - use map with lambda to return an iterator that will apply the function to all elements in the iterable i.e check if it is a vowel - then pass the iterator to the sum() built-in function where all True values will evaluate to 1 and False to 0 thus the sum returned will be of the True values i.e vowel occurrence
+def vowels_count(s):
+    # print(list(i in 'aeiou' for i in s))
+    return sum(map(lambda x: x in 'aeiou', s))
+
+print(vowels_count('learn by practice the github pull request workflow'))
+print(vowels_count('fork this template for the 100 days journal - to keep yourself accountable (multiple languages available)'))
+print(vowels_count('solutions from my python3 code practice challenges from hackerrank'))
+print(vowels_count('code practice from my freecodecamp study'))
 
