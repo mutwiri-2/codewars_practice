@@ -58,5 +58,16 @@ print(vowels_count('code practice from my freecodecamp study'))
 
 print('#' * 99)
 
+# more succint solution - use filter with lambda to return an iterator of all elements in the iterable (string) for which the function returns True i.e is a vowel - then pass the filter object to list to create a list and then return the length of the list
+def vowels_count(s):
+    # print(list(i in 'aeiou' for i in s))
+    return len(list(filter(lambda x: x in 'aeiou', s)))
+
+print(vowels_count('learn by practice the github pull request workflow'))
+print(vowels_count('fork this template for the 100 days journal - to keep yourself accountable (multiple languages available)'))
+print(vowels_count('solutions from my python3 code practice challenges from hackerrank'))
+print(vowels_count('code practice from my freecodecamp study'))
+
+print('#' * 99)
 
 
