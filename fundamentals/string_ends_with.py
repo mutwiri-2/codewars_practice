@@ -13,7 +13,7 @@ print(solution('abcde', 'abc'))
 print(solution('abcde', ''))
 
 # another solution
-
+#startswith() and endswith() string methods return True if the string they are called on starts with or ends with the string passed to the methods. They are a good alternative to the '==' operator if you just want to check just the equality of the first or last parts of a string rather than the whole string. It is a case sensitive comparison
 def solution(string, ending):
     return string.endswith(ending)
 
