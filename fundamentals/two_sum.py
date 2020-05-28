@@ -8,6 +8,9 @@
 
 # twoSum [1, 2, 3] 4 === (0, 2)
 
+# using enumerate () built-in function, we can get back a tuple of the indices and values in a list
+# enumerate() is a built-in function that returns an iterator of tuples containing indices and values of a list
+
 def two_sum(numbers, target):
     for index1, number1 in enumerate(numbers):
         for index2, number2 in enumerate(numbers):
