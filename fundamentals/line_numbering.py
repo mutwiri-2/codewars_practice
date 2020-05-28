@@ -43,3 +43,14 @@ print(number(["a", "b", "c"]))
 print(number([]))
 import string
 print(number(list(string.ascii_letters)))
+
+print('#' * 99)
+# solution using list comprehension and unzip
+def number(lines):
+    numbered_list = ["{}: {}".format(*lines) for lines in enumerate(lines, 1)]
+    return numbered_list
+
+print(number(["a", "b", "c"]))
+print(number([]))
+import string
+print(number(list(string.ascii_letters)))
