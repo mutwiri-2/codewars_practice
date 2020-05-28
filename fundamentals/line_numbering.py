@@ -17,3 +17,19 @@ def number(lines):
     return list
 print(number(["a", "b", "c"]))
 print(number([]))
+
+print('#' * 99)
+
+def number(lines):
+    numbered_list = []
+    for index, line in enumerate(lines, 1):
+        numbered_list.append("{}: {}".format(index, line))
+    return numbered_list
+
+print(number(["a", "b", "c"]))
+print(number([]))
+import string
+print(number(list(string.ascii_letters)))
+
+
+print('#' * 99)
