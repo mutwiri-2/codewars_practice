@@ -33,3 +33,13 @@ print(number(list(string.ascii_letters)))
 
 
 print('#' * 99)
+
+# solution using list comprehension
+def number(lines):
+    numbered_list = [f"{line_number}: {line}" for line_number, line in enumerate(lines, 1)]
+    return numbered_list
+
+print(number(["a", "b", "c"]))
+print(number([]))
+import string
+print(number(list(string.ascii_letters)))
