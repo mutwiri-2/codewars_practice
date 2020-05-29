@@ -46,3 +46,12 @@ print(reverse_letter("krishan"))
 print(reverse_letter("ultr53o?n"))
 
     
+print('#' * 99)
+# use regexes - find all occurrences of alphabets and then reverse that list and create a string using join
+import re
+def reverse_letter(string):
+    return "".join(re.findall(r"[a-zA-Z]", string)[::-1])
+    
+
+print(reverse_letter("krishan"))
+print(reverse_letter("ultr53o?n"))
