@@ -42,3 +42,13 @@ def delete_nth(order,max_e):
 
 print(delete_nth([1,1,1,1],2))
 print(delete_nth([20,37,20,21],1))
+
+
+print('#' * 99)
+
+# using a list comprehension without creating a new list first - alternate solution
+def delete_nth(order,max_e):
+    return [order[i] for i in range(len(order)) if order[:i].count(order[i])<max_e]
+
+print(delete_nth([1,1,1,1],2))
+print(delete_nth([20,37,20,21],1))
