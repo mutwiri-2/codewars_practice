@@ -9,10 +9,25 @@
 
 #   delete_nth ([20,37,20,21],1) # return [20,37,21]
 
+# solution using list comprehension
 def delete_nth(order,max_e):
     new_list = []
     [new_list.append(i) for i in order if new_list.count(i)<max_e]
     return new_list
+
+print(delete_nth([1,1,1,1],2))
+print(delete_nth([20,37,20,21],1))
+
+print('#' * 99)
+# longer solution using a for loop
+def delete_nth(order,max_e):
+    limited_occurrence_list = []
+    for i in order:
+        if limited_occurrence_list.count(i) < max_e:
+            limited_occurrence_list.append(i)
+        else:
+            continue
+    return limited_occurrence_list
 
 print(delete_nth([1,1,1,1],2))
 print(delete_nth([20,37,20,21],1))
