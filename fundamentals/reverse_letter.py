@@ -27,5 +27,11 @@ def reverse_letter(string):
 print(reverse_letter("krishan"))
 print(reverse_letter("ultr53o?n"))
 
+print('#' * 99)
 
+def reverse_letter(string):
+    return ''.join([i for i in string[::-1] if i.isalpha()])
+
+print(reverse_letter("krishan"))
+print(reverse_letter("ultr53o?n"))
     
