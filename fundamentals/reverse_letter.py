@@ -37,7 +37,7 @@ print(reverse_letter("ultr53o?n"))
 
 
 print('#' * 99)
-# use filter higher-order function passing it <method 'isalpha' of 'str' objects> (str.alpha) and the reversed version of the passed string. This returns an iterator of all elements in the reversed string that are alphabets then calling join string method on them returns a string
+# use filter higher-order function passing it <method 'isalpha' of 'str' objects> (str.isalpha) and the reversed version of the passed string. This returns an iterator of all elements in the reversed string that are alphabets then calling join string method on them returns a string
 
 def reverse_letter(string):
     return ''.join(filter(str.isalpha, reversed(string)))
