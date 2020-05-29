@@ -36,3 +36,14 @@ print(is_sorted_and_how([15, 7, 3, -8]))
 print(is_sorted_and_how([4, 2, 30]))
 
 print('#' * 99)
+# using ternary operator in Python - Ternary operators are more commonly known as conditional expressions in Python. These operators evaluate something based on a condition being true or not.
+# Syntax : [on_true] if [expression] else [on_false] if [expression] else [on_false]
+def is_sorted_and_how(arr):
+    s = sorted(arr)
+    return 'yes, ascending' if arr==s else 'yes, descending' if arr == s[::-1] else 'no'
+
+print(is_sorted_and_how([1, 2]))
+
+print(is_sorted_and_how([15, 7, 3, -8]))
+
+print(is_sorted_and_how([4, 2, 30]))
