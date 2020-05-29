@@ -19,6 +19,7 @@ print(delete_nth([1,1,1,1],2))
 print(delete_nth([20,37,20,21],1))
 
 print('#' * 99)
+
 # longer solution using a for loop
 def delete_nth(order,max_e):
     limited_occurrence_list = []
@@ -28,6 +29,16 @@ def delete_nth(order,max_e):
         else:
             continue
     return limited_occurrence_list
+
+print(delete_nth([1,1,1,1],2))
+print(delete_nth([20,37,20,21],1))
+
+
+print('#' * 99)
+
+# using a list comprehension without creating a new list first
+def delete_nth(order,max_e):
+    return [o for i,o in enumerate(order) if order[:i].count(o)<max_e]
 
 print(delete_nth([1,1,1,1],2))
 print(delete_nth([20,37,20,21],1))
