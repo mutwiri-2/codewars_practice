@@ -17,10 +17,23 @@ def gimme(input_array):
         if num != max(input_array) and num != min(input_array):
             return index
 
+print(gimme([2, 3, 1]))
+print(gimme([5, 10, 14]))
+
 print('#' * 99)
 
 def gimme(input_array):
     return input_array.index(sorted(input_array)[1])
+
+print(gimme([2, 3, 1]))
+print(gimme([5, 10, 14]))
+
+print('#' * 99)
+
+def gimme(input_array):
+    for index, num in enumerate(input_array):
+        if num == sorted(input_array)[1]:
+            return index
 
 print(gimme([2, 3, 1]))
 print(gimme([5, 10, 14]))
