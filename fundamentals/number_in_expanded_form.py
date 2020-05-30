@@ -11,9 +11,7 @@ def expanded_form(num):
     size = len(num_str)
     result = []
     for i in range(0,size):
-        if num_str[i] == '0':
-            continue
-        else:
+        if num_str[i] != '0':
             result.append(num_str[i] + '0'*((size-1)-i))
     return ' + '.join(result)
 
