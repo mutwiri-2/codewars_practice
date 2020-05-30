@@ -20,7 +20,7 @@ print(expanded_form(42))
 print(expanded_form(70304))
 
 print('#' * 99)
-# alternate solution
+# alternate solution - use a generator function to create an iterator of the expanded form of each non-zero digit in a number then join them using the + operator
 def expanded_form(num):
     num = list(str(num))
     return ' + '.join(digit + '0' * (len(num) - index - 1) for index,digit in enumerate(num) if digit != '0')
