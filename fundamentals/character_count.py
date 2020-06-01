@@ -10,6 +10,23 @@ def count(string):
         result[char] = result.get(char,0) + 1
     return result
 
+print(count('aba'))
+print(count(''))
+
+print('#' * 99)
+
+# alternate solution
+def count(string):
+    char_count = {}
+    for char in string:
+        char_count.setdefault(char, 0)
+        char_count[char] += 1
+    return char_count
+print(count('aba'))
+print(count(''))
+
+print('#' * 99)
+
 # alternate solution
 def count(string):
     return {i: string.count(i) for i in string}
