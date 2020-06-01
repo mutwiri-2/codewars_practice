@@ -45,3 +45,17 @@ def count(string):
 
 print(count('aba'))
 print(count(''))
+
+print('#' * 99)
+# alternate solution - use set to get unique elements in string - then get the count of each unique element
+
+def count(string):
+    result = {}
+    for char in set(string):
+        result[char] = string.count(char)
+    return result 
+
+print(count('aba'))
+print(count(''))
+
+print('#' * 99)
