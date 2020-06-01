@@ -26,3 +26,24 @@ print(persistence(4))
 print(persistence(39))
 print(persistence(999))
 print(persistence(3456))
+
+print('#' * 99)
+# second solution - similar to first 
+
+def persistence(n):
+    count = 0
+    while len(str(n)) != 1:
+        count += 1
+        product = 1
+        for digit in str(n):
+            product *= int(digit)
+        n = product
+    return count
+
+print(persistence(4))
+print(persistence(39))
+print(persistence(999))
+print(persistence(3456))
+
+
+print('#' * 99)
