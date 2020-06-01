@@ -35,3 +35,21 @@ def find_next_square(sq):
 print(find_next_square(121))
 print(find_next_square(625))
 print(find_next_square(114))
+print(find_next_square(319225))
+print(find_next_square(15241383936))
+
+print('#' * 99)
+
+# The above two solutions get timed out -- so Codewars advices one to optimize his / her code
+
+def find_next_square(sq):
+    root = sq ** 0.5
+    return (int(root) + 1)**2 if root.is_integer() else -1
+    # return (root + 1)**2 if root.is_integer() else -1
+    return (int(root) + 1)**2 if root.is_integer() else -1
+
+print(find_next_square(121))
+print(find_next_square(625))
+print(find_next_square(114))
+print(find_next_square(319225))
+print(find_next_square(15241383936))
