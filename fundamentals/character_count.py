@@ -32,3 +32,16 @@ def count(string):
 
 print(count('aba'))
 print(count(''))
+
+print('#' * 99)
+
+# alternate solution - using Counter from collections module 
+# A Counter is a dict subclass for counting hashable objects. It is a collection where elements are stored as dictionary keys and their counts are stored as dictionary values. Counts are allowed to be any integer value including zero or negative counts
+
+from collections import Counter
+
+def count(string):
+    return dict(Counter(string))
+
+print(count('aba'))
+print(count(''))
