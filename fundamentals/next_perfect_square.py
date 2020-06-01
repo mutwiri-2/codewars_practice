@@ -22,3 +22,16 @@ def find_next_square(sq):
 print(find_next_square(121))
 print(find_next_square(625))
 print(find_next_square(114))
+
+print('#' * 99)
+# second attempt - shorter version
+
+def find_next_square(sq):
+    for i in range(sq):
+        if i ** 2 == sq:
+            return (i+1) ** 2
+    return -1
+
+print(find_next_square(121))
+print(find_next_square(625))
+print(find_next_square(114))
