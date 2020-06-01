@@ -28,7 +28,8 @@ print('#' * 99)
 
 # alternate solution
 def count(string):
-    return {i: string.count(i) for i in string}
+    # return {i: string.count(i) for i in string}
+    return {i:string.count(i) for i in set(string)}
 
 print(count('aba'))
 print(count(''))
