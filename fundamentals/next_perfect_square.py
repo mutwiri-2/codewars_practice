@@ -44,8 +44,8 @@ print('#' * 99)
 
 def find_next_square(sq):
     root = sq ** 0.5
-    return (int(root) + 1)**2 if root.is_integer() else -1
     # return (root + 1)**2 if root.is_integer() else -1
+    # return -1 if root % 1 else (root + 1)**2
     return (int(root) + 1)**2 if root.is_integer() else -1
 
 print(find_next_square(121))
