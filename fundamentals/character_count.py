@@ -19,8 +19,7 @@ print('#' * 99)
 def count(string):
     char_count = {}
     for char in string:
-        char_count.setdefault(char, 0)
-        char_count[char] += 1
+        char_count[char] = char_count.setdefault(char, 0) + 1
     return char_count
 print(count('aba'))
 print(count(''))
