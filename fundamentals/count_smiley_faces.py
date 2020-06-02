@@ -72,10 +72,10 @@ print(count_smileys([';]', ':[', ';*', ':$', ';-D']))
 
 print('#' * 99)
 
-# best solution
+# best solution - use regex's findall() method passing it a space separated string of the elements in array - findall() will return a list of all occurences of a smiley and passing that list to the len() function will return the number of smileys
 from re import findall
 def count_smileys(arr):
-    return len(list(findall(r"[:;][-~]?[)D]", " ".join(arr))))
+    return len(findall(r"[:;][-~]?[)D]", " ".join(arr)))
 
 print(count_smileys([]))
 print(count_smileys([':D',':~)',';~D',':)']))
