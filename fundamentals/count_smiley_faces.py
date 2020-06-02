@@ -29,6 +29,14 @@ def count_smileys(arr):
                 count += 1
     return count
 
+print(count_smileys([]))
+print(count_smileys([':D',':~)',';~D',':)']))
+print(count_smileys([':)',':(',':D',':O',':;']))
+print(count_smileys([';]', ':[', ';*', ':$', ';-D']))
+
+print('#' * 99)
+
+
 def count_smileys(arr):
     count = 0
     smileys = [":)", ";)", ":~)", ";~)", ":-)", ";-)", ":D", ";D", ":~D", ";~D", ":-D", ";-D"]
@@ -36,6 +44,14 @@ def count_smileys(arr):
       if i in smileys:
         count += 1
     return count
+
+print(count_smileys([]))
+print(count_smileys([':D',':~)',';~D',':)']))
+print(count_smileys([':)',':(',':D',':O',':;']))
+print(count_smileys([';]', ':[', ';*', ':$', ';-D']))
+
+print('#' * 99)
+
 
 def count_smileys(arr):
     eyes = [":", ";"]
@@ -53,7 +69,15 @@ print(count_smileys([]))
 print(count_smileys([':D',':~)',';~D',':)']))
 print(count_smileys([':)',':(',':D',':O',':;']))
 print(count_smileys([';]', ':[', ';*', ':$', ';-D']))
+
+print('#' * 99)
+
 # best solution
 from re import findall
 def count_smileys(arr):
     return len(list(findall(r"[:;][-~]?[)D]", " ".join(arr))))
+
+print(count_smileys([]))
+print(count_smileys([':D',':~)',';~D',':)']))
+print(count_smileys([':)',':(',':D',':O',':;']))
+print(count_smileys([';]', ':[', ';*', ':$', ';-D']))
